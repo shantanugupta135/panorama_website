@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.g-map {
+    height: 300px;
+    border: 0px;
+    width: -webkit-fill-available;
+}
+
+html{scroll-behavior: smooth;}
