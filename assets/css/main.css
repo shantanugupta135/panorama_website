@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
 .g-map {
     height: 300px;
     border: 0px;
@@ -9,3 +21,155 @@
 }
 
 html{scroll-behavior: smooth;}
+
+/* Services Section */
+
+.services-card{
+    background: #f9fafb;;
+    padding: 1rem;
+    border-radius: 40px;
+}
+
+/* Why Panorama */
+
+.why-section{
+    background: #eff0f2;
+}
+
+.reward-item {
+    display: flex;
+    background: #075985;
+    padding: 1rem;
+    margin: 20px 0;
+    border-radius: 5px;
+    width: 100%
+}
+
+.reward-img {
+    width: 100%;
+    height: 100%;
+}
+
+.reward-head {
+    color: #fff;
+    font-size: 20px;
+}
+
+.reward-desc {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+}
+
+.why-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.why-img img{
+    width: 100%;
+    height: auto;
+}
+
+.solutions-section {
+    padding: 100px 0px;
+  }
+  .solutions-heading h2 {
+    font-size: 50px;
+    font-weight: 700;
+    color: #000;
+    line-height: 60px;
+    margin-bottom: 30px;
+  }
+  .solutions-heading p {
+    font-size: 16px;
+    color: rgba(38, 39, 41, 0.7);
+    margin-bottom: 70px;
+    width: 40%;
+  }
+  .solutions-row {
+    background: #eef0f2;
+    padding: 50px 70px;
+    border-radius: 15px;
+    margin-bottom: 70px;
+  }
+  .solutions-row:last-child {
+    margin-bottom: 0px;
+  }
+  .solutions-contents h3 {
+    font-size: 30px;
+    color: #1d263a;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+  .solutions-contents p {
+    font-size: 18px;
+    color: rgb(6 22 6 / 89%);
+    margin-bottom: 30px;
+  }
+  .solutions-contents .input-group {
+    margin-bottom: 30px;
+  }
+  .solutions-contents .form-control {
+    padding: 5px 10px;
+    font-size: 14px;
+    color: rgba(38, 39, 41, 0.7);
+    border: 1px solid #ced4da;
+    border-radius: 3px;
+    box-shadow: none;
+  }
+  .solutions-contents .input-group button {
+    background: #008fb0;
+    color: #fff;
+    box-shadow: none;
+    padding: 8px 10px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .solutions-contents ul li {
+    font-size: 14px;
+    padding-right: 10px;
+    color: rgba(38, 39, 41, 0.7);
+  }
+  .solutions-contents ul li:last-child {
+    padding-right: 0px;
+  }
+  .solutions-contents ul li span {
+    display: block;
+    font-weight: 700;
+    color: rgba(38, 39, 41, 1);
+  }
+  .solutions-img {
+    position: relative;
+  }
+  .solutions-img .s-imgs {
+    width: 100%;
+  }
+  .solutions-info {
+    position: absolute;
+    bottom: 16px;
+    left: 0px;
+    right: 90px;
+    margin: 0 auto;
+    width: 65%;
+  }
+  .solutions-info a {
+    display: block;
+    padding: 5px 10px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    font-size: 16px;
+    color: #000;
+    text-decoration: none;
+    min-width: 200px;
+    position: relative;
+  }
+  .solutions-info img {
+    max-width: 35px;
+  }
+  .solutions-info img.fw-ic {
+    max-width: 16px;
+    position: absolute;
+    right: 10px;
+    top: 30%;
+  }

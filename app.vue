@@ -5,6 +5,8 @@
 </template>
 <script>
 import { defineNuxtConfig } from "nuxt/config";
+// importing AOS css style globally
+import 'aos/dist/aos.css';
 export default defineNuxtConfig({
   app: {
     head: {

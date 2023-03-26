@@ -2,7 +2,7 @@
 <template>
   <div class="bg-white">
     <!-- Header -->
-    <!-- <header class="absolute inset-x-0 top-0 z-50">
+  <!-- <header class="absolute inset-x-0 top-0 z-50">
       <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div class="flex lg:flex-1">
           <a href="#" class="-m-1.5 p-1.5">
@@ -50,56 +50,62 @@
       </DialogPanel>
     </Dialog>
 
-    </header> -->
+          </header> -->
 
     <header class="bg-gray-900">
-    <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
-      <div class="flex lg:flex-1">
-        <a href="#" class="-m-1.5 p-1.5">
-          <span class="sr-only">Your Company</span>
-          <img class="h-8 w-auto" src="https://panoramacorp.in/img/logo_new.png" alt="" />
-        </a>
-      </div>
-      <div class="flex lg:hidden">
-        <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400" @click="mobileMenuOpen = true">
-          <span class="sr-only">Open main menu</span>
-          <Bars3Icon class="h-6 w-6" aria-hidden="true" />
-        </button>
-      </div>
-      <div class="hidden lg:flex lg:gap-x-12">
-        <a v-for="item in navigation" :key="item.name" :href="'#'+item.href" class="text-sm font-semibold leading-6 text-white">{{ item.name }}</a>
-      </div>
-      <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        <a href="#" class="text-sm font-semibold leading-6 text-white">Log in <span aria-hidden="true">&rarr;</span></a>
-      </div>
-    </nav>
-    <Dialog as="div" class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
-      <div class="fixed inset-0 z-10" />
-      <DialogPanel class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-gray-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
-        <div class="flex items-center justify-between">
+      <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+        <div class="flex lg:flex-1">
           <a href="#" class="-m-1.5 p-1.5">
             <span class="sr-only">Your Company</span>
             <img class="h-8 w-auto" src="https://panoramacorp.in/img/logo_new.png" alt="" />
           </a>
-          <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-400" @click="mobileMenuOpen = false">
-            <span class="sr-only">Close menu</span>
-            <XMarkIcon class="h-6 w-6" aria-hidden="true" />
+        </div>
+        <div class="flex lg:hidden">
+          <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400"
+            @click="mobileMenuOpen = true">
+            <span class="sr-only">Open main menu</span>
+            <Bars3Icon class="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
-        <div class="mt-6 flow-root">
-          <div class="-my-6 divide-y divide-gray-500/25">
-            <div class="space-y-2 py-6">
-              <a v-for="item in navigation" :key="item.name" :href="'#'+item.href" class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-white hover:bg-gray-800"
-              @close="mobileMenuOpen = false" :open="mobileMenuOpen">{{ item.name }}</a>
-            </div>
-            <div class="py-6">
-              <a href="#" class="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-7 text-white hover:bg-gray-800">Log in</a>
+        <div class="hidden lg:flex lg:gap-x-12">
+          <a v-for="item in navigation" :key="item.name" :href="'#' + item.href"
+            class="text-sm font-semibold leading-6 text-white">{{ item.name }}</a>
+        </div>
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+          <a href="#" class="text-sm font-semibold leading-6 text-white">Log in <span aria-hidden="true">&rarr;</span></a>
+        </div>
+      </nav>
+      <Dialog as="div" class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
+        <div class="fixed inset-0 z-10" />
+        <DialogPanel
+          class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-gray-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
+          <div class="flex items-center justify-between">
+            <a href="#" class="-m-1.5 p-1.5">
+              <span class="sr-only">Your Company</span>
+              <img class="h-8 w-auto" src="https://panoramacorp.in/img/logo_new.png" alt="" />
+            </a>
+            <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-400" @click="mobileMenuOpen = false">
+              <span class="sr-only">Close menu</span>
+              <XMarkIcon class="h-6 w-6" aria-hidden="true" />
+            </button>
+          </div>
+          <div class="mt-6 flow-root">
+            <div class="-my-6 divide-y divide-gray-500/25">
+              <div class="space-y-2 py-6">
+                <a v-for="item in navigation" :key="item.name" :href="'#' + item.href"
+                  class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-white hover:bg-gray-800"
+                  @close="mobileMenuOpen = false" :open="mobileMenuOpen">{{ item.name }}</a>
+              </div>
+              <div class="py-6">
+                <a href="#"
+                  class="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-7 text-white hover:bg-gray-800">Log
+                  in</a>
+              </div>
             </div>
           </div>
-        </div>
-      </DialogPanel>
-    </Dialog>
-  </header>
+        </DialogPanel>
+      </Dialog>
+    </header>
 
     <main id="home">
       <!-- Hero section -->
@@ -125,18 +131,20 @@
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
           <div class="mx-auto max-w-3xl py-32 sm:py-32 lg:py-48">
             <div class="text-center">
-              <h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-                Invest in <span class="bg-sky-800">Verification</span>
+              <h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl" data-aos="fade-up"
+                data-aos-duration="1000">
+                Invest in <span class="bg-sky-800 px-5">Verification</span>
                 <br />For better & secured growth
               </h1>
-              <p class="mt-6 text-lg leading-8 text-gray-300">
+              <p class="mt-6 text-lg leading-8 text-gray-300" data-aos="fade-up" data-aos-duration="1000"
+                data-aos-delay="1000">
                 It is said that Information is the resolution of uncertainty.
                 This is true about both our personal and professional lives. We
                 at Panorama, help in this resolution by providing a
                 comprehensive view about the prospective associations that an
                 organization might be entering into.
               </p>
-              <div class="mt-10 flex items-center justify-center gap-x-6">
+              <div class="mt-10 flex items-center justify-center gap-x-6" data-aos="fade-up" data-aos-duration="1000">
                 <a href="#"
                   class="rounded-md bg-sky-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-slate-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">Get
                   started</a>
@@ -149,7 +157,7 @@
           <!-- Logo cloud -->
           <div
             class="mx-auto grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
-             <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+            <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
               src="https://tailwindui.com/img/logos/158x48/transistor-logo-white.svg" alt="Transistor" width="158"
               height="48" />
             <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
@@ -185,7 +193,7 @@
       <!-- Feature section -->
       <div class="mt-32 sm:mt-16">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
-          <div class="mx-auto max-w-5xl sm:text-center">
+          <div class="mx-auto max-w-5xl sm:text-center" data-aos="zoom-in" data-aos-duration="2000">
             <h2 class="text-base font-semibold leading-7 text-sky-800">
               Everything you need
             </h2>
@@ -205,19 +213,20 @@
             </p>
           </div>
         </div>
-
-         <!-- Services Offered section -->
-
-        <div class="relative overflow-hidden pt-16">
+        <div class="relative overflow-hidden pt-16" data-aos="flip-left" data-aos-duration="3000">
           <div class="mx-auto max-w-7xl px-6 lg:px-8">
-            <img src="https://tailwindui.com/img/component-images/project-app-screenshot.png" alt="App screenshot"
-              class="mb-[-12%] rounded-xl shadow-2xl ring-1 ring-gray-900/10" width="2432" height="1442" />
+            <img src="../assets/image/animated_kyc.jpeg" alt="App screenshot"
+              class="mb-[-12%] rounded-xl shadow-1xl ring-1 ring-gray-900/10 w-full"/>
             <div class="relative" aria-hidden="true">
               <div class="absolute -inset-x-20 bottom-0 bg-gradient-to-t from-white pt-[7%]" />
             </div>
           </div>
         </div>
-        <div class="mx-auto mt-16 max-w-7xl px-6 sm:mt-20 md:mt-20 lg:px-8" id="services">
+      </div>
+
+      <!-- Services Offered section -->
+    <!-- 
+        <div class="mx-auto mt-16 max-w-7xl px-6 sm:mt-20 md:mt-20 lg:px-8" id="services" data-aos="fade-up" data-aos-duration="3000">
           <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:px-8 text-center">
             Services Offered
           </h2>
@@ -231,23 +240,166 @@
                   </div>
                 </div>
               </div>
-            <!-- <div class = "group"> 
-              {{ feature.name }}
-              <p class="invisible group-hover:visible h-10 hover:h-full animate-pulse">{{ feature.description }}</p>
-                        </div> -->
+
               <div class="flex justify-center mt-7 font-bold">
                 {{ feature.name }}
               </div>
               <dd class="mt-7 text-base leading-8 text-gray-600">{{ feature.description }}</dd>
             </div>
           </dl>
+              </div> -->
+
+      <div class="bg-white py-24 sm:py-32">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="mx-auto max-w-2xl text-center text-center">
+            <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Services Offered</h2>
+          </div>
+
+          <div class="solutions-row mt-10">
+            <div class="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
+              <div class="lg:mt-3">
+                <div class="solutions-img" data-aos="fade-right" data-aos-duration=1000>
+                  <img src="https://media.istockphoto.com/id/1295897667/photo/businessman-using-fingerprint-indentification-to-access-personal-financial-data-idea-for-e.jpg?s=1024x1024&w=is&k=20&c=eymz9BH56hcowoKj7usXu4xcJnHGmyFBjkHs8UlCORE="
+                    class="img-fluid s-imgs" alt="Solution Image" />
+                </div>
+              </div>
+              <div class="lg:pl-10 mt-10 md:mt-0 lg:mt-0">
+                <div class="solutions-contents" data-aos="zoom-in" data-aos-duration=1000>
+                  <h3 class="d-none d-md-block" data-i-key="v"> Contact Point Verification </h3>
+                  <p data-i-key="w">The Company is offering its services for CPV as per the requirement of the concerned institution. It may be in financial or any other sector that wants a background check of the addresses being furnished by its clients/employees/ vendors/ associates. We use features like the Geo Tagging and Clic2Call in our system.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="solutions-row mt-10">
+            <div class="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
+              <div>
+                <div class="solutions-contents" data-aos="zoom-in" data-aos-duration=1000>
+                  <h3 class="d-none d-md-block" data-i-key="v"> Stock / Asset Verification </h3>
+                  <p data-i-key="w">The company offers its services for conducting dealer/SME stock and WC audit . We are presently operational in NCR/Western UP and Punjab. We also extend our services for Post disbursement verification/ inspection of assets being financed.</p>
+                </div>
+              </div>
+              <div class="lg:mt-3 lg:pl-10">
+                <div class="solutions-img" data-aos="fade-left" data-aos-duration=1000>
+                  <img src="https://3.imimg.com/data3/MD/PJ/MY-10078967/stock-and-fixed-assets-verification-500x500.jpg"
+                    class="img-fluid s-imgs" alt="Solution Image" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="solutions-row mt-10">
+            <div class="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
+              <div class="lg:mt-3 sm:mt-3">
+                <div class="solutions-img" data-aos="fade-right" data-aos-duration=1000>
+                  <img src="https://cloudimage.homeonline.com/855x451/public/uploads/gallery/articles/All-you-need-to-Know-about-Credit-Appraisal-Process.jpg"
+                    class="img-fluid s-imgs" alt="Solution Image" />
+                </div>
+              </div>
+              <div class="lg:pl-10 mt-10 md:mt-0 lg:mt-0">
+                <div class="solutions-contents" data-aos="zoom-in" data-aos-duration=1000>
+                  <h3 class="d-none d-md-block" data-i-key="v"> Pre Credit Appraisal </h3>
+                  <p data-i-key="w">Pre credit appraisal of a loan proposal is an important job in the sanction and disbursal of a credit facility. The company offers its services towards data entry as well as loan proposal processing.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="solutions-row mt-10">
+            <div class="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
+              <div class="pl-10">
+                <div class="solutions-contents" data-aos="zoom-in" data-aos-duration=1000>
+                  <h3 class="d-none d-md-block" data-i-key="v"> Document Verification </h3>
+                  <p data-i-key="w">The Company offers to do a due diligent check of the documents being furnished by clients/employees/vendor s/ associates of our customers.</p>
+                </div>
+              </div>
+              <div class="mt-3 pl-6">
+                <div class="solutions-img" data-aos="fade-left" data-aos-duration=1000>
+                  <img src="https://www.nucsoft.com/upload/solution/large/1624444114.WhatsApp_Image_2021-06-23_at_3.36.32_PM_(1).jpeg"
+                    class="img-fluid s-imgs" alt="Solution Image" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="solutions-row mt-10">
+            <div class="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
+              <div class="mt-3">
+                <div class="solutions-img" data-aos="fade-right" data-aos-duration=1000>
+                  <img src="https://media.istockphoto.com/id/1295897667/photo/businessman-using-fingerprint-indentification-to-access-personal-financial-data-idea-for-e.jpg?s=1024x1024&w=is&k=20&c=eymz9BH56hcowoKj7usXu4xcJnHGmyFBjkHs8UlCORE="
+                    class="img-fluid s-imgs" alt="Solution Image" />
+                </div>
+              </div>
+              <div class="lg:pl-10 mt-10 md:mt-0 lg:mt-0">
+                <div class="solutions-contents" data-aos="zoom-in" data-aos-duration=1000>
+                  <h3 class="d-none d-md-block" data-i-key="v"> TSR / Valuation </h3>
+                  <p data-i-key="w">The company is offering its services for doing the Legall Verification of Property documents along with its valuation.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="solutions-row mt-10">
+            <div class="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
+              <div class="pl-10">
+                <div class="solutions-contents" data-aos="zoom-in" data-aos-duration=1000>
+                  <h3 class="d-none d-md-block" data-i-key="v"> Personal Discussion </h3>
+                  <p data-i-key="w">We offer our services for conducting exhaustive personal discussion for high ticket credit exposur.</p>
+                </div>
+              </div>
+
+              <div class="mt-3">
+                <div class="solutions-img" data-aos="fade-left" data-aos-duration=1000>
+                  <img src="https://www.jaipuria.ac.in/blog/wp-content/uploads/2021/12/5-skills-you-need-to-clear-any-group-discussion-PI.jpg"
+                    class="img-fluid s-imgs" alt="Solution Image" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div v-for="person in services" :key="person.name" class="solutions-row mt-10">
+            <div class="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
+              <div>
+                <div class="solutions-img">
+                  <img
+                  :src="person.imageUrl"
+                    class="img-fluid s-imgs" alt="Solution Image" />
+                </div>
+              </div>
+              <div>
+                <div class="solutions-contents" data-aos="zoom-in" data-aos-duration=1000>
+                  <h3 class="d-none d-md-block" data-i-key="v">{{ person.name }}</h3>
+                  <p data-i-key="w">{{ person.description }}</p>
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <!-- <div v-for="person in services" :key="person.name" class="solutions-row mt-10">
+            <div class="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
+              <div>
+                <div class="solutions-img">
+                  <img
+                  :src="person.imageUrl"
+                    class="img-fluid s-imgs" alt="Solution Image" />
+                </div>
+              </div>
+              <div>
+                <div class="solutions-contents" data-aos="zoom-in" data-aos-duration=1000>
+                  <h3 class="d-none d-md-block" data-i-key="v">{{ person.name }}</h3>
+                  <p data-i-key="w">{{ person.description }}</p>
+                </div>
+              </div>
+            </div>
+          </div> -->
         </div>
       </div>
 
 
-      <div class="bg-white py-16 sm:py-16" id="about">
+      <div class="bg-white py-16 sm:py-16 w-full" id="about">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
-          <div class="mx-auto max-w-2xl text-center sm:text-center">
+          <div class="mx-auto max-w-2xl text-center sm:text-center" data-aos="fade-right" data-aos-duration=1000>
             <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Meet our leadership
             </h2>
@@ -258,11 +410,13 @@
               clients.
             </p>
           </div>
-
+        
           <ul role="list"
-            class="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-6 gap-y-20 sm:grid-cols-2 lg:max-w-4xl lg:gap-x-8 xl:max-w-none">
+            class="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-6 gap-y-20 sm:grid-cols-2 lg:max-w-4xl lg:gap-x-8 xl:max-w-none ">
             <li v-for="person in people" :key="person.name"
-              class="flex flex-col gap-6 xl:flex-row items-center text-center">
+              class="flex flex-col gap-6 xl:flex-row items-center text-center" :data-aos="person.style"
+              data-aos-duration=2000>
+             
               <img class="aspect-[4/5] w-52 rounded-2xl object-cover" :src="person.imageUrl" alt="" />
               <div class="flex-auto">
                 <h3 class="text-lg font-semibold leading-8 tracking-tight text-gray-900">
@@ -276,27 +430,58 @@
                 </p>
               </div>
             </li>
+            
           </ul>
         </div>
       </div>
 
       <!-- Why Panorma -->
-      <div class="py-3 sm:py-7">
+      <div class="py-3 sm:py-7 why-section">
         <div class="">
-          <div class="mx-auto max-w-2xl text-center">
+          <div class="mx-auto max-w-2xl text-center" data-aos="fade-right" data-aos-duration=1000>
             <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Why Panorma?
+              Why Panorama?
             </h2>
+            <p class="mt-5">lorem ipsum dolor sit amet contequar lorem ipsum dolor sit amet contequar lorem ipsum dolor
+              sit amet contequar lorem ipsum dolor sit amet contequar lorem ipsum dolor sit amet contequar</p>
           </div>
-          <div class="mt-10 bg-sky-800">
-            <ul class="list-disc text-gray-300 px-10 pt-3 pb-2 text-lg leading-8 lg:ml-20">
-              <li class="pb-2">Experience in financial products and the intricacies associated with them.</li>
-              <li class="pb-2">Domain knowledge of finance industry and its challenges.</li>
-              <li class="pb-2">Use of technology as an enabler, to deliver accuracy with speed.</li>
-              <li class="pb-2">Dedicated and experienced team of domain experts, field verifiers and backhand support.
-              </li>
-              <li class="pb-2">Attuned to the dynamic requirements of our clients.</li>
-            </ul>
+          <div class="mt-10 mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
+              <div>
+                <div class="reward-item">
+                  <div class="px-2">
+                    <h4 class="reward-head">Financial Products</h4>
+                    <p class="reward-desc">Experience in financial products and the
+                intricacies associated with them.</p>
+                  </div>
+                </div>
+                <div class="reward-item">
+                  <div class="px-2">
+                    <h4 class="reward-head">Domain Experts</h4>
+                    <p class="reward-desc">Domain knowledge of finance industry and its
+                challenges.</p>
+                  </div>
+                </div>
+                <div class="reward-item">
+                  <div class="px-2">
+                    <h4 class="reward-head">Experienced Professional</h4>
+                    <p class="reward-desc">Dedicated and experienced team of domain
+                experts, field verifiers and backhand support.</p>
+                  </div>
+                </div>
+                <div class="reward-item">
+                  <div class="px-2">
+                    <h4 class="reward-head">Client Satisfaction</h4>
+                    <p class="reward-desc">Attuned to the dynamic requirements of our
+                clients.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="why-img">
+                <img
+                  src="https://panoramacorp.in/img/about-img.d76509e9.png" />
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -310,7 +495,8 @@
               Life at Panorma
             </h2>
           </div>
-          <div id="controls-carousel" class="relative w-full mt-10" data-carousel="slide">
+          <div id="controls-carousel" class="relative w-full mt-10" data-carousel="slide" data-aos="zoom-out"
+            data-aos-duration=1000>
             <!-- Carousel wrapper -->
             <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
               <!-- Item 1 -->
@@ -330,7 +516,7 @@
                 <img
                   src="https://previews.123rf.com/images/opolja/opolja1801/opolja180100213/94962859-cheerful-colleagues-having-fun-in-office-chairs.jpg"
                   class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-              </div>
+              </div> 
             </div>
 
             <!-- Slider controls -->
@@ -363,26 +549,29 @@
       </div>
 
       <div class="bg-white sm:py-10 mt-10 sm:mt-10">
-            <div class="mx-auto max-w-7xl px-6 lg:px-8">
-              <div class="mx-auto max-w-2xl text-center sm:text-center">
-              <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                Meet our Clients
-              </h2>
-            </div>
-            <div class="carousel-image mt-2">
-          <Carousel :settings="settings" :breakpoints="breakpoints" :autoplay="2000" :wrap-around="true">
-        <Slide v-for="slide in carouselImg" :key="slide">
-          <div class="carousel__item px-7">
-            <img src="https://download.logo.wine/logo/Axis_Bank/Axis_Bank-Logo.wine.png" alt="black chair and white table" />
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="mx-auto max-w-2xl text-center sm:text-center" data-aos="zoom-in-down" data-aos-duration="1000">
+            <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              Our Clients
+            </h2>
           </div>
-        </Slide>
-      </Carousel>
+          <div data-aos="fade-right" data-aos-duration="2000">
+            <div class="carousel-image mt-2">
+              <Carousel :settings="settings" :breakpoints="breakpoints" :autoplay="2000" :wrap-around="true">
+                <Slide v-for="slide in carouselImg" :key="slide">
+                  <div class="carousel__item px-7">
+                   <img src="../assets/panorama_client/Axis_Bank.png" />
+                    <!-- <img :src="require(`~/assets/panorama_client/${slide.imageUrl}`)" /> -->
+                  </div>
+                </Slide>
+              </Carousel>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-   </div>
 
       <!-- Blog section -->
-      <div class="bg-white py-2 sm:py-8" id="blog">
+      <div class="bg-white py-2 sm:py-8 why-section" id="blog">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
           <div class="mx-auto max-w-2xl text-center">
             <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -395,16 +584,6 @@
 
           <div class="mx-auto mt-6 grid max-w-2xl grid-cols-1 gap-y-20 gap-x-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
             <article v-for="post in posts" :key="post.id" class="flex flex-col items-start justify-between">
-            <!-- <div class="relative w-full">
-                <img
-                  :src="post.imageUrl"
-                  alt=""
-                  class="aspect-[16/9] w-full rounded-2xl bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]"
-                />
-                <div
-                  class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10"
-                />
-                        </div> -->
               <div class="max-w-2xl">
                 <div class="mt-8 flex items-center text-xs justify-center">
                   <time :datetime="post.datetime" class="text-gray-500">{{
@@ -458,7 +637,7 @@
                     <span class="sr-only">Telephone</span>
                     <BuildingOffice2Icon class="h-7 w-6 text-white" aria-hidden="true" />
                   </dt>
-                  <dd>WYNN Plaza C-2A <br/> Acharya Niketan Mayur Vihar-I <br />New Delhi-110091</dd>
+                  <dd>WYNN Plaza C-2A <br /> Acharya Niketan Mayur Vihar-I <br />New Delhi-110091</dd>
                 </div>
                 <div class="flex gap-x-4">
                   <dt class="flex-none">
@@ -493,40 +672,12 @@
           <div class="px-6 pb-10 pt-4 sm:pb-10 lg:py-24 lg:px-8 sm:px-8">
             <div class="gmap2">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.696673570967!2d77.2913983149228!3d28.608875182427056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5eb1ac8fa23%3A0x4ce0b0aa80b26369!2sWynn%20Plaza!5e0!3m2!1sen!2sin!4v1678902661979!5m2!1sen!2sin" class="g-map" allowfullscreen="" loading="lazy"></iframe>
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.696673570967!2d77.2913983149228!3d28.608875182427056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5eb1ac8fa23%3A0x4ce0b0aa80b26369!2sWynn%20Plaza!5e0!3m2!1sen!2sin!4v1678902661979!5m2!1sen!2sin"
+                class="g-map" allowfullscreen="" loading="lazy"></iframe>
             </div>
           </div>
         </div>
       </div>
-
-      <!-- FAQ section -->
-    <!-- <div class="mx-auto mt-2 mb-8 max-w-7xl px-6 sm:mt-8 lg:px-8">
-        <div class="mx-auto max-w-4xl divide-y divide-gray-900/10">
-          <h2 class="text-2xl font-bold leading-10 tracking-tight text-gray-900">
-            Frequently asked questions
-          </h2>
-          <dl class="mt-10 space-y-6 divide-y divide-gray-900/10">
-            <Disclosure as="div" v-for="faq in faqs" :key="faq.question" class="pt-6" v-slot="{ open }">
-              <dt>
-                <DisclosureButton class="flex w-full items-start justify-between text-left text-gray-900">
-                  <span class="text-base font-semibold leading-7">{{
-                    faq.question
-                  }}</span>
-                  <span class="ml-6 flex h-7 items-center">
-                    <PlusSmallIcon v-if="!open" class="h-6 w-6" aria-hidden="true" />
-                    <MinusSmallIcon v-else class="h-6 w-6" aria-hidden="true" />
-                  </span>
-                </DisclosureButton>
-              </dt>
-              <DisclosurePanel as="dd" class="mt-2 pr-12">
-                <p class="text-base leading-7 text-gray-600">
-                  {{ faq.answer }}
-                </p>
-              </DisclosurePanel>
-            </Disclosure>
-          </dl>
-        </div>
-          </div> -->
     </main>
 
     <!-- Footer -->
@@ -585,6 +736,14 @@ import {
   ServerIcon,
 } from "@heroicons/vue/20/solid";
 import 'flowbite';
+import { onMounted } from "vue";
+import AOS from "aos";
+
+
+onMounted(() => {
+  AOS.init();
+})
+
 
 
 const navigation = [
@@ -631,6 +790,7 @@ const features = [
     icon: FingerPrintIcon,
   },
 ];
+
 const tiers = [
   {
     name: "Hobby",
@@ -749,30 +909,40 @@ const people = [
     role: "CEO of PanoramaCorp",
     imageUrl: "https://panoramacorp.in/img/navneet.jpeg",
     bio: "During his professional career spanning 13 years, he has worked with Apnaloan.com, Bank of Baroda, Bank of Punjab, Tata Motor Finance and ICICI bank. He has the experience of Sales and Marketing, Branch operations and Credit.",
+    style: 'fade-right',
+    tag: 'co-founder'
   },
   {
     name: "Prashant Dogra",
     role: "Co-founder of PanoramaCorp",
     imageUrl: "https://panoramacorp.in/img/prashant.jpeg",
     bio: "He has worked with leading Banks and Financial institutions like Tata Motor Finance, HDFC bank and ICICI bank. He is well versed with retail financial products like Auto Loan, TW loans, Commercial Vehicle Loans and Insurance.",
+    style: 'fade-left',
+    tag: 'co-founder'
   },
   {
     name: "Ravi Bhattacharya",
     role: "Head Business",
     imageUrl: "https://panoramacorp.in/img/navneet.jpeg",
     bio: "As an Operations Head , he handles the backend operations along with a dedicated and experienced team of individuals who are always responsive to the needs of our principals. Being a BA LLB, he brings in the professional expertise to the day to day working.",
+    style: 'fade-right',
+    tag: 'member'
   },
   {
     name: "Vijay Pant",
     role: "Head Opeartion",
     imageUrl: "https://panoramacorp.in/img/prashant.jpeg",
     bio: "Is a B.Com (Hons) from Delhi Univ, an MA in Economics and a fellow member of the Institute of Chartered Accounts of India. She is instrumental in helping in improving the processes and work flow and identifying the areas of improvements.",
+    style: 'fade-left',
+    tag: 'member'
   },
   {
     name: "Kanika Goel",
     role: "Consultant",
     imageUrl: "https://panoramacorp.in/img/prashant.jpeg",
     bio: "Is a B.Com (Hons) from Delhi Univ, an MA in Economics and a fellow member of the Institute of Chartered Accounts of India. She is instrumental in helping in improving the processes and work flow and identifying the areas of improvements.",
+    style: 'fade-right',
+    tag: 'advisor'
   },
 
   // More people...
@@ -839,14 +1009,35 @@ const posts = [
   // More posts...
 ];
 
+
+const carouselImg = [
+  {
+    imageUrl: 'Axis_Bank.png' ,
+  },
+  {
+    imageUrl: "Ambit_Finance.jpg",
+  },
+  {
+    imageUrl: "",
+  },
+  {
+    imageUrl: "",
+  },
+  {
+    imageUrl: "",
+  },
+
+  // More people...
+];
+
 const mobileMenuOpen = ref(false);
 </script>
 
 <script>
 import { defineComponent } from 'vue'
 import { Carousel, Navigation, Slide } from 'vue3-carousel'
-
 import '../node_modules/vue3-carousel/dist/carousel.css';
+
 
 export default defineComponent({
   name: 'Breakpoints',
@@ -878,30 +1069,7 @@ export default defineComponent({
   }),
 })
 
-const carouselImg = [
-  {
-    imageUrl: "https://panoramacorp.in/img/navneet.jpeg",
-  },
-  {
-    imageUrl: "https://panoramacorp.in/img/prashant.jpeg",
-    bio: "He has worked with leading Banks and Financial institutions like Tata Motor Finance, HDFC bank and ICICI bank. He is well versed with retail financial products like Auto Loan, TW loans, Commercial Vehicle Loans and Insurance.",
-  },
-  {
-    imageUrl: "https://panoramacorp.in/img/navneet.jpeg",
-    bio: "As an Operations Head , he handles the backend operations along with a dedicated and experienced team of individuals who are always responsive to the needs of our principals. Being a BA LLB, he brings in the professional expertise to the day to day working.",
-  },
-  {
-    imageUrl: "https://panoramacorp.in/img/prashant.jpeg",
-    bio: "Is a B.Com (Hons) from Delhi Univ, an MA in Economics and a fellow member of the Institute of Chartered Accounts of India. She is instrumental in helping in improving the processes and work flow and identifying the areas of improvements.",
-  },
-  {
-    imageUrl: "https://panoramacorp.in/img/prashant.jpeg",
-    bio: "Is a B.Com (Hons) from Delhi Univ, an MA in Economics and a fellow member of the Institute of Chartered Accounts of India. She is instrumental in helping in improving the processes and work flow and identifying the areas of improvements.",
-  },
-
-  // More people...
-];
-
 </script>
+
 
 
