@@ -557,13 +557,17 @@
           </div>
           <div data-aos="fade-right" data-aos-duration="2000">
             <div class="carousel-image mt-2">
-              <Carousel :settings="settings" :breakpoints="breakpoints" :autoplay="2000" :wrap-around="true">
+              <!-- <Carousel :settings="settings" :breakpoints="breakpoints" :autoplay="2000" :wrap-around="true">
                 <Slide v-for="slide in carouselImg" :key="slide">
                   <div class="carousel__item px-7">
-                   <img src="../assets/panorama_client/Axis_Bank.png" />
-                    <!-- <img :src="require(`~/assets/panorama_client/${slide.imageUrl}`)" /> -->
+                   <img :src="require(`../assets/panorama_client/${slide.imageUrl}`)" />
                   </div>
                 </Slide>
+              </Carousel> -->
+              <Carousel>
+                <div v-for="(slide, index) in carouselImg" :key="index" class="carousel-item">
+                  <img :src="useAssets('panorama_client/' + slide.imageUrl)" alt="Test">
+                </div>
               </Carousel>
             </div>
           </div>
@@ -738,13 +742,71 @@ import {
 import 'flowbite';
 import { onMounted } from "vue";
 import AOS from "aos";
+// import { Carousel, Navigation, Slide } from 'vue3-carousel'
+// import '../node_modules/vue3-carousel/dist/carousel.css';
+
+
+// const settings = {
+//   itemsToShow: 1,
+//   snapAlign: 'center',
+// }
+
+// const breakpoints = {
+//   700: {
+//     itemsToShow: 3.5,
+//     snapAlign: 'center',
+//   },
+//   // 1024 and up
+//   1024: {
+//     itemsToShow: 5,
+//     snapAlign: 'start',
+//   },
+// }
+
+// export default defineComponent({
+//   name: 'Breakpoints',
+//   components: {
+//     Carousel,
+//     Slide,
+//     Navigation,
+//   },
+//   data: () => ({
+//     // carousel settings
+//     settings: {
+//       itemsToShow: 1,
+//       snapAlign: 'center',
+//     },
+//     // breakpoints are mobile first
+//     // any settings not specified will fallback to the carousel settings
+//     breakpoints: {
+//       // 700px and up
+//       700: {
+//         itemsToShow: 3.5,
+//         snapAlign: 'center',
+//       },
+//       // 1024 and up
+//       1024: {
+//         itemsToShow: 5,
+//         snapAlign: 'start',
+//       },
+//     },
+//   }),
+// })
+
 
 
 onMounted(() => {
   AOS.init();
 })
 
+const useAssets = (path) => {
+  const assets = import.meta.glob('~/assets/**/*', {
+    eager: true,
+    import: 'default'
+  })
 
+  return assets['/assets/' + path]
+}
 
 const navigation = [
   { name: "Home", href: "home" },
