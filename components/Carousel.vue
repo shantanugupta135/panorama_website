@@ -14,7 +14,7 @@
       const carouselItemWidth = carouselItem[0].clientWidth
       const carouselItemMarginRight = parseInt(window.getComputedStyle(carouselItem[0]).marginRight)
       const carouselItemTotalWidth = carouselItemWidth + carouselItemMarginRight
-      const carouselItemsCount = carouselItem.length
+      const carouselItemsCount = c  .length
       const carouselContainerWidth = carouselInner.clientWidth
   
       let currentIndex = 0
@@ -53,6 +53,6 @@
   .carousel-item {
     flex: 0 0 auto;
     width: 180px; /* Change this to your desired width */
-    margin-right: 20px; /* Change this to your desired margin */
+   margin-right: 20px; /* Change this to your desired margin */
   }
   </style>

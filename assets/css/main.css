@@ -173,3 +173,9 @@ html{scroll-behavior: smooth;}
     right: 10px;
     top: 30%;
   }
+
+  .carousel-item {
+   padding-left: 15px;
+   display: block;
+   margin: auto;
+  }

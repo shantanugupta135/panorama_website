@@ -154,22 +154,26 @@
             </div>
           </div>
 
-          <!-- Logo cloud -->
+         
           <div
-            class="mx-auto grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
-            <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+            class="mx-auto grid max-w-lg text-center sm:max-w-xl lg:mx-0 lg:max-w-none">
+            <h1 class="text-2xl font-bold tracking-tight text-white sm:text-3xl" data-aos="fade-up"
+                data-aos-duration="1000">
+                 "In banking or finance, trust is the only thing you have to sell"
+              </h1>
+            <!-- <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
               src="https://tailwindui.com/img/logos/158x48/transistor-logo-white.svg" alt="Transistor" width="158"
-              height="48" />
-            <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-              src="https://tailwindui.com/img/logos/158x48/reform-logo-white.svg" alt="Reform" width="158" height="48" />
-            <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-              src="https://tailwindui.com/img/logos/158x48/tuple-logo-white.svg" alt="Tuple" width="158" height="48" />
-            <img class="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1"
+              height="48" /> -->
+            <!-- <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+              src="https://tailwindui.com/img/logos/158x48/reform-logo-white.svg" alt="Reform" width="158" height="48" /> -->
+            <!-- <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+              src="https://tailwindui.com/img/logos/158x48/tuple-logo-white.svg" alt="Tuple" width="158" height="48" /> -->
+            <!-- <img class="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1"
               src="https://tailwindui.com/img/logos/158x48/savvycal-logo-white.svg" alt="SavvyCal" width="158"
-              height="48" />
-            <img class="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
+              height="48" /> -->
+            <!-- <img class="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
               src="https://tailwindui.com/img/logos/158x48/statamic-logo-white.svg" alt="Statamic" width="158"
-              height="48" />
+              height="48" /> -->
           </div>
         </div>
         <div
@@ -492,7 +496,7 @@
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
           <div class="mx-auto max-w-2xl text-center sm:text-center mt-6">
             <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Life at Panorma
+              Life at Panorama
             </h2>
           </div>
           <div id="controls-carousel" class="relative w-full mt-10" data-carousel="slide" data-aos="zoom-out"
@@ -556,7 +560,7 @@
             </h2>
           </div>
           <div data-aos="fade-right" data-aos-duration="2000">
-            <div class="carousel-image mt-2">
+            <div class="carousel-image mt-10">
               <!-- <Carousel :settings="settings" :breakpoints="breakpoints" :autoplay="2000" :wrap-around="true">
                 <Slide v-for="slide in carouselImg" :key="slide">
                   <div class="carousel__item px-7">
@@ -1077,17 +1081,39 @@ const carouselImg = [
     imageUrl: 'Axis_Bank.png' ,
   },
   {
-    imageUrl: "Ambit_Finance.jpg",
+    imageUrl: "DCB_bank.png",
+  },
+  // {
+  //   imageUrl: "fullerton_India.png",
+  // },
+  // {
+  //   imageUrl: "ICICI_Bank.png",
+  // },
+  {
+    imageUrl: "HDB_financial_Services.png",
+  },
+  // {
+  //   imageUrl: "IDFC_First bank.png",
+  // },
+  {
+    imageUrl: "IIFL_Hosung_Finance.png",
   },
   {
-    imageUrl: "",
+    imageUrl: "PNB_Housing_Finance.png",
   },
+  // {
+  //   imageUrl: "piramal_finance.png",
+  // },
   {
-    imageUrl: "",
+    imageUrl: "Tata_capital.png",
   },
-  {
-    imageUrl: "",
-  },
+  // {
+  //   imageUrl: "UGroup.png",
+  // },
+  // {
+  //   imageUrl: "Yes_Bank.png",
+  // },
+
 
   // More people...
 ];
