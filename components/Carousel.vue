@@ -17,8 +17,8 @@
       const carouselItemsCount = c  .length
       const carouselContainerWidth = carouselInner.clientWidth
   
-      let currentIndex = 0
-      let scrollAmount = 0
+      // let currentIndex = 0
+      // let scrollAmount = 0
   
       setInterval(() => {
         currentIndex++
